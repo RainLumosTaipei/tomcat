@@ -21,6 +21,7 @@ output
 # test/webapp-virtual-webapp use it:
 # target
 work
+target
 build.properties
 mvn.properties
 .ant-targets-build.xml

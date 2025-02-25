@@ -16,10 +16,10 @@
  */
 package org.apache.catalina.ant;
 
+import org.apache.tools.ant.BuildException;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-
-import org.apache.tools.ant.BuildException;
 
 public abstract class AbstractCatalinaCommandTask extends AbstractCatalinaTask {
 

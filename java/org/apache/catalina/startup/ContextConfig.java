@@ -66,6 +66,7 @@ import org.apache.catalina.core.StandardContext;
 import org.apache.catalina.core.StandardHost;
 import org.apache.catalina.util.ContextName;
 import org.apache.catalina.util.Introspection;
+import org.apache.jasper.servlet.JasperInitializer;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.Jar;
@@ -731,6 +732,7 @@ public class ContextConfig implements LifecycleListener {
      */
     protected synchronized void configureStart() {
         // Called from StandardContext.start()
+        context.addServletContainerInitializer(new JasperInitializer(), null);
 
         if (log.isTraceEnabled()) {
             log.trace(sm.getString("contextConfig.start"));
